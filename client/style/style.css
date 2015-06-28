@@ -1,0 +1,155 @@
+/*fundamentals*/
+
+
+@font-face {
+  font-family: 'Hero';
+  src: url('fonts/hero.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Hero-Light';
+  src: url('fonts/herolight.otf') format('opentype');
+}
+
+
+body{
+	font-family:'hero';
+	background:rgba(245, 245, 220, 0.16)  url('img/bg.png');
+}
+
+.section{
+	min-height:200px;
+}
+
+
+/*text and color modifications*/
+
+ul.bullet {
+    list-style:square outside url("img/bullet.png");
+}
+
+.white-trans{
+	background-color:rgba(255,255,255,.5);
+}
+.accent-custom-1{
+	background:#64625F;
+    color: rgb(83, 109, 118);
+    text-shadow: 2px 2px #71CBC4;
+}
+
+.accent-custom-3{
+	  background-color: rgba(255, 238, 187, 0.79);
+	  border-top:1px solid rgba(0,0,0,.1);
+      border-bottom:1px solid rgba(0,0,0,.1);
+}
+
+.btn-custom{
+	height:43px;
+	background:rgb(92, 102, 113);
+}
+.btn-custom:hover{
+	background:rgb(62, 82, 93);
+}
+
+.earlybird{
+	background-color:white !important;
+}
+
+.accent-custom-2{
+	background:#B6E4E2;
+    color: rgb(83, 109, 118);
+    text-shadow: 2px 2px #E4DBD2;
+}
+
+.light,.thin{
+	font-family:'Hero-Light';
+}
+
+.reg{
+	font-family:'Hero';
+}
+
+
+span.under-dot {
+  border-bottom: 4px rgb(255, 241, 189) dotted;
+}
+
+
+/* Sign Up Form*/
+
+.text-adj-btn{
+    line-height: 100%;
+    vertical-align: -webkit-baseline-middle;
+}
+/* label color */
+ .input-field label {
+   color: #000;
+ }
+ /* label focus color */
+ .input-field input[type=email]:focus + label {
+   color: #000;
+ }
+ /* label underline focus color */
+ .input-field input[type=email]:focus {
+   border-bottom: 1px solid #000;
+   box-shadow: 0 1px 0 0 #000;
+ }
+ /* valid color */
+ .input-field input[type=email].valid {
+   border-bottom: 1px solid #000;
+   box-shadow: 0 1px 0 0 #000;
+ }
+ /* invalid color */
+ .input-field input[type=email].invalid {
+   border-bottom: 1px solid #000;
+   box-shadow: 0 1px 0 0 #000;
+ }
+ /* icon prefix focus color */
+ .input-field .prefix.active {
+   color: #000;
+ }
+      
+	  
+/*Hero*/
+/*Hero - center on small*/
+
+.text-justify-xs {
+    text-align: justify;
+}
+
+/* Small devices */
+
+    .center-small {
+        text-align: center;
+    }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .center-small {
+        text-align: left;
+    }
+}
+
+
+/*typed.js*/
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}

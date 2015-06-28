@@ -1,13 +1,21 @@
 /*fundamentals*/
 
+ul.section1, ul.section2 {
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+ul.section1 li{
+	opacity:0;
+}
 
 @font-face {
   font-family: 'Hero';
-  src: url('fonts/hero.otf') format('opentype');
+  src: url('fonts/Hero.otf') format('opentype');
 }
 @font-face {
   font-family: 'Hero-Light';
-  src: url('fonts/herolight.otf') format('opentype');
+  src: url('fonts/Herolight.otf') format('opentype');
 }
 
 

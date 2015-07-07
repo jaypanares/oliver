@@ -1,0 +1,68 @@
+<template name="statusTemplate">
+	 	{{> statusHero}}
+		{{> referralSystem}}
+</template>
+
+<template name="referralSystem">
+	    <div class="section accent-custom-3 grey lighten-5 text-grey">
+	  	<br>
+
+	  	<div class="row">
+	  		<div class="col s12 m8 offset-m2">
+
+	  			<div class="col m12">
+					{{#if referralsCount}}
+						<h3 class="thin">You have invited <span class="under-dot">{{referralsCount}}</span> Friends!  Invite friends and get even more Oliver</h3>
+					{{else}}
+						<h3 class="thin">Invite friends to get Oliver</h3>
+					{{/if}}
+{{> leaderboard}}
+	  			</div>
+
+	  		</div>
+	  	</div>
+	  	<br>
+	    </div>
+</template>
+
+<template name="statusHero">
+	<div id="hero" class="section white-trans">
+	<div class="row">
+	</div>
+	<div class="row">
+		<div class="col s12 m10 offset-m1 l8 offset-l2">
+			<div class="col s12 l4 center">
+				<img class="responsive-img"  src="/img/oliver.png" />
+			</div>
+			<div class="col s12 l8 center-small ">
+				<h2 class="thin">Share <span class="under-dot light">Oliver</span></h2>
+				<h4 class="thin">Share Oliver to move up the waiting list and get more Oliver</h4>
+			</div>
+		</div>
+	</div>
+</div>
+</template>
+
+
+
+
+<template name="leaderboard">
+
+    <div class="message"> share this link: <input onClick="this.setSelectionRange(0, this.value.length)" class="refLink-input" type="textarea" value="{{referralLink}}" /> {{> shareit shareData}}</div>
+  <ol class="leaderboard">
+	<!-- <li class="player header">
+	    <span class="name">What you get</span>
+	    <span class="score"></span>
+	  </li> -->
+    {{#each players}}
+      {{> player}}
+    {{/each}}
+  </ol>
+</template>
+
+<template name="player">
+  <li class="player {{selected}} {{highlight}}">
+    <span class="name">{{name}}</span>
+    <span class="score">{{reward}}</span>
+  </li>
+</template>

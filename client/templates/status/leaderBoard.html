@@ -1,0 +1,15 @@
+<template name="leaderBoard">
+	<div class="message"> share this link:
+		<input data-bind="{click: setSelection, value: referralLink}" class="refLink-input" type="textarea" />
+		{{> shareit shareData}}
+	</div>
+	<ol class="leaderboard">
+		<!-- <li class="player header">
+	    <span class="name">What you get</span>
+	    <span class="score"></span>
+	  </li> -->
+		{{#each players}}
+			{{> player}}
+		{{/each}}
+	</ol>
+</template>

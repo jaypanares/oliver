@@ -5,20 +5,20 @@
 </head>
 
 <template name="landingTemplate">
- 	{{> landingHero}}
-<ul class="section2">
-	{{> earlybird}}
-</ul>
+	{{> landingHero}}
+	<ul class="section2">
+		{{> earlyBird routeParams=routeParams}}
+	</ul>
 	<ul class="section1">
-	{{> landingBot}}
-</ul>
-<ul class="section1">
-	{{> earlybird}}
-</ul>
+		{{> landingBot}}
+	</ul>
+	<ul class="section1">
+		{{> earlyBird routeParams=routeParams}}
+	</ul>
 </template>
 
 <template name="landingBot">
-{{> firstSection}}
- {{> secondSection}}
+	{{> firstSection}}
+	{{> secondSection}}
   {{> thirdSection}}
 </template>

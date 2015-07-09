@@ -1,26 +1,25 @@
-<template name="earlybird">
-    <div class="section accent-custom-3">
-  	<br>
-  	<div class="row">
-		<li>
-  		<div class="col s12 m10 offset-m1">
-  			<div class="col m12">
-  				<h4 class="center">Oliver helps you stay focused and get more done.</h4>
-				<h6 class="mutedtext">Oliver is coming - be the first to know.</h6>
-  			    <form action="#" class="emailEnter">
-  			      <div class="input-field">
-  			        <input type="email" class="emailfield validate col s12 m9 earlybird">
-  					<label for="email" data-error="wrong" data-success="right">Email</label>
-  			        <button class="btn col s12 m3 btn-custom">
-  			          <span class="text-adj-btn">Try Oliver</span>
-  			        </button>
-  			      </div>
-  			    </form>
-			
-  			</div>
-  		</div>
-		</li>
-  	</div>
-  	<br>
+<template name="earlyBird">
+  <div class="section accent-custom-3">
+    <br>
+    <div class="row">
+      <li>
+        <div class="col s12 m10 offset-m1">
+          <div class="col m12">
+            <h4 class="center">Oliver helps you stay focused and get more done.</h4>
+            <h6 class="mutedtext">Oliver is coming - be the first to know.</h6>
+            <form action="#" class="emailEnter" data-bind="submit: formSubmit">
+              <div class="input-field">
+                <input type="email" class="emailfield validate col s12 m9 earlybird" data-bind="value: inputEmail">
+                <label for="email" data-error="wrong" data-success="right">Email</label>
+                <button class="btn col s12 m3 btn-custom">
+                  <span class="text-adj-btn">Try Oliver</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </li>
     </div>
+    <br>
+  </div>
 </template>

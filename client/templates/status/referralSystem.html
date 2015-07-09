@@ -1,0 +1,20 @@
+<template name="referralSystem">
+	<div class="section accent-custom-3 grey lighten-5 text-grey">
+		<br>
+		<div class="row">
+			<div class="col s12 m8 offset-m2">
+				<div class="col m12">
+					{{#if listedUser}}
+						<h3 class="thin">You have invited
+							<span class="under-dot">{{referralsCount}}</span> Friends! Invite friends and get even more Oliver
+						</h3>
+						{{> leaderBoard routeParams=routeParams listedUser=listedUser}}
+					{{else}}
+						<h3 class="thin">Invite friends to get Oliver</h3>
+					{{/if}}
+				</div>
+			</div>
+		</div>
+		<br>
+	</div>
+</template>

@@ -27,10 +27,17 @@ Template.leaderBoard.viewmodel('leaderBoard', function (data) {
     shareData: function () {
       return {
         title: 'Get more done with Oliver',
-        author: 'jaypanares@gmail.com',
+        article: 'Oliver manages your time for you. Check it out!',
+        description: 'Oliver manages your time for you. Check it out!',
         summary: 'Oliver manages your time for you. Check it out!',
-        thumbnail: '/img/thumbnail.png'
+        url: this.referralLink(),
+        thumbnail: function () {
+          return 'http://forked-oliver.meteor.com/img/thumbnail.png';
+        },
+        image: function () {
+          return 'http://forked-oliver.meteor.com/img/thumbnail.png';
+        }
       };
     }
   }
-}, ['players']);
+}, ['players', 'shareData']);

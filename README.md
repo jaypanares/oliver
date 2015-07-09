@@ -4,4 +4,4 @@
 - [x] Implement pub/sub
 - [x] Fixed extra `/` on links
 - [x] Removed 15 friends reward
-- [x] Refactored to ViewModels (manuel:viewmodel)
+- [x] Refactored to ViewModels (`manuel:viewmodel`)

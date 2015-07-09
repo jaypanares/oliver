@@ -5,9 +5,9 @@ Template.leaderBoard.viewmodel('leaderBoard', function (data) {
       var rewards = [
         {num: 1, text: 'Get 1 free week of Oliver'},
         {num: 3, text: 'Get 1 free week of Oliver'},
-        {num: 5, text: 'Get 2 free week of Oliver'},
-        {num: 10, text: 'Get 2 free week of Oliver'},
-        {num: 25, text: 'Get 6 free week of Oliver'}
+        {num: 5, text: 'Get 2 free weeks of Oliver'},
+        {num: 10, text: 'Get 2 free weeks of Oliver'},
+        {num: 25, text: 'Get 6 free weeks of Oliver'}
       ];
       _.map(rewards, function (item) {
         _.extend(item, {

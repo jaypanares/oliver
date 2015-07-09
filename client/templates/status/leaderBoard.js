@@ -25,13 +25,12 @@ Template.leaderBoard.viewmodel('leaderBoard', function (data) {
       elem.setSelectionRange(0, elem.value.length);
     },
     shareData: function () {
-      //social sharing data
       return {
         title: 'Get more done with Oliver',
-        url: link,
+        author: 'jaypanares@gmail.com',
         summary: 'Oliver manages your time for you. Check it out!',
-        image: 'http://localhost:3003/img/thumbnail.png'
-      }
+        thumbnail: '/img/thumbnail.png'
+      };
     }
   }
 }, ['players']);

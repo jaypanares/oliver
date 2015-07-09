@@ -1,3 +1,3 @@
-Meteor.publish('Players', function () {
-  return Players.find();
+Meteor.publish('listedEmail', function (referralId) {
+  return Emails.find({_id: referralId});
 });

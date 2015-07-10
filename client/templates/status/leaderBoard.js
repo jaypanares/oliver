@@ -1,6 +1,11 @@
 Template.leaderBoard.viewmodel('leaderBoard', function (data) {
   return {
-    referenceId: data.routeParams._id,
+    referenceId: '',
+    referralLink: '',
+    onCreated: function () {
+      this.referenceId(data.routeParams._id);
+      this.referralLink(Meteor.absoluteUrl(this.referenceId()));
+    },
     players: function () {
       var rewards = [
         {num: 1, text: 'Get 1 free week of Oliver'},
@@ -16,9 +21,6 @@ Template.leaderBoard.viewmodel('leaderBoard', function (data) {
         });
       });
       return rewards;
-    },
-    referralLink: function () {
-      return Meteor.absoluteUrl(this.referenceId());
     },
     setSelection: function (evt) {
       elem = evt.target;

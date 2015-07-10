@@ -1,7 +1,10 @@
 Template.earlyBird.viewmodel('earlyBird', function (data) {
   return {
     inputEmail: '',
-    ipAdd: headers.getClientIP(),
+    ipAdd: '',
+    onCreated: function () {
+      this.ipAdd(headers.getClientIP());
+    },
     referId: function () {
       if (!data.routeParams) {
         return '';

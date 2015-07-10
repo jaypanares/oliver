@@ -1,7 +1,8 @@
 Template.referralSystem.viewmodel('referralSystem', function (data) {
   return {
-    referralId: data.routeParams._id,
+    referralId: '',
     onCreated: function () {
+      this.referralId(data.routeParams._id);
       this.templateInstance.subscribe('listedEmail', this.referralId());
     },
     listedUser: function () {

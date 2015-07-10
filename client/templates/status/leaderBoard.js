@@ -2,7 +2,7 @@ Template.leaderBoard.viewmodel('leaderBoard', function (data) {
   return {
     referenceId: '',
     referralLink: '',
-    onCreated: function () {
+    onRendered: function () {
       this.referenceId(data.routeParams._id);
       this.referralLink(Meteor.absoluteUrl(this.referenceId()));
     },
@@ -27,17 +27,22 @@ Template.leaderBoard.viewmodel('leaderBoard', function (data) {
       elem.setSelectionRange(0, elem.value.length);
     },
     shareData: function () {
+      var shareText = 'Oliver manages your time for you. Check it out!';
       return {
         title: 'Get more done with Oliver',
-        article: 'Oliver manages your time for you. Check it out!',
-        description: 'Oliver manages your time for you. Check it out!',
-        summary: 'Oliver manages your time for you. Check it out!',
+        author: function () {
+          return 'Oliver';
+        },
+        article: shareText,
+        description: shareText,
+        summary: shareText,
+        text: shareText,
         url: this.referralLink(),
         thumbnail: function () {
-          return 'http://forked-oliver.meteor.com/img/thumbnail.png';
+          return '/img/thumbnail.png';
         },
         image: function () {
-          return 'http://forked-oliver.meteor.com/img/thumbnail.png';
+          return '/img/thumbnail.png';
         }
       };
     }

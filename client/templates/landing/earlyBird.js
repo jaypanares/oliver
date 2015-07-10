@@ -2,14 +2,12 @@ Template.earlyBird.viewmodel('earlyBird', function (data) {
   return {
     inputEmail: '',
     ipAdd: '',
-    onCreated: function () {
+    referId: '',
+    onRendered: function () {
       this.ipAdd(headers.getClientIP());
-    },
-    referId: function () {
-      if (!data.routeParams) {
-        return '';
+      if (data.routeParams) {
+        this.referId(data.routeParams.referId);
       }
-      return data.routeParams.referId;
     },
     formSubmit: function (evt) {
       evt.preventDefault();
@@ -17,6 +15,7 @@ Template.earlyBird.viewmodel('earlyBird', function (data) {
         if (!err) {
           switch (cb) {
             case 0:
+              Segment.trackEvent("Entered with duplicate IP");
               Materialize.toast('You used an IP address that is already on our system', 4000);
               Materialize.toast('to check your status, sign up with your previous email address or email me: <a class="red-text text-lighten-5" href="mailto:sid@oliverapp.co"> sid@oliverapp.co</a>', 4000);
               break;

@@ -1,7 +1,8 @@
 Template.referralSystem.viewmodel('referralSystem', function (data) {
   return {
     referralId: '',
-    onCreated: function () {
+    onRendered: function () {
+      Segment.trackPage('Checked status');
       this.referralId(data.routeParams._id);
       this.templateInstance.subscribe('listedEmail', this.referralId());
     },

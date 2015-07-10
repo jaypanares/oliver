@@ -20,10 +20,11 @@ Meteor.methods({
       referrer: refId,
       referrals: []
     };
-
     check(insertObj, Schemas.Emails);
 
-    var returnId = Emails.insert(insertObj);
+    var returnId = Emails.insert(insertObj, function () {
+      Segment.trackEvent('Added email to waiting list');
+    });
 
     Emails.update({_id: refId}, {
       $push: {referrals: returnId}

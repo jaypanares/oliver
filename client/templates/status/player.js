@@ -2,7 +2,7 @@ Template.player.viewmodel('player', function (data) {
   var listedUser = data.listedUser;
   return {
     referrals: '',
-    onCreated: function () {
+    onRendered: function () {
       this.referrals(listedUser.referrals);
     },
     highlight: function () {

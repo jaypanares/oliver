@@ -6,13 +6,13 @@
 
 <template name="landingTemplate">
 	{{> landingHero}}
-	<ul class="section2">
+	<ul id="earlyBirdTop" class="section2">
 		{{> earlyBird routeParams=routeParams}}
 	</ul>
 	<ul class="section1">
 		{{> landingBot}}
 	</ul>
-	<ul class="section1">
+	<ul id="earlyBirdBottom" class="section1">
 		{{> earlyBird routeParams=routeParams}}
 	</ul>
 </template>

@@ -1,6 +1,6 @@
 # TODO
 - [ ] Troubleshoot `meteorclub:shareit` package
-- _Stil investigating alternatives, apparently for FB you need an appID_
+- _Stil investigating alternatives, apparently for FB you need an appID, null as appID is deprecated_
 - [x] Implement Segment.io tracking
 - [x] Implement pub/sub
 - [x] Fixed extra `/` on links

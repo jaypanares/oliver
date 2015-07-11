@@ -12,7 +12,6 @@ accounts-ui
 accounts-password
 johnantoni:meteor-normalize
 gadicohen:headers
-joshowens:shareit
 fortawesome:fontawesome
 manuel:viewmodel
 jamiter:pluralize

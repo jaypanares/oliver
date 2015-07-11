@@ -25,26 +25,6 @@ Template.leaderBoard.viewmodel('leaderBoard', function (data) {
     setSelection: function (evt) {
       elem = evt.target;
       elem.setSelectionRange(0, elem.value.length);
-    },
-    shareData: function () {
-      var shareText = 'Oliver manages your time for you. Check it out!';
-      return {
-        title: 'Get more done with Oliver',
-        author: function () {
-          return 'Oliver';
-        },
-        article: shareText,
-        description: shareText,
-        summary: shareText,
-        text: shareText,
-        url: this.referralLink(),
-        thumbnail: function () {
-          return '/img/thumbnail.png';
-        },
-        image: function () {
-          return '/img/thumbnail.png';
-        }
-      };
     }
   }
 }, ['players', 'shareData']);

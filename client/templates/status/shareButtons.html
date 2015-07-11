@@ -1,0 +1,20 @@
+<template name="shareButtons">
+  <ul class="share-buttons">
+
+    <li>
+    <a id="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url}}&t={{text}}" title="Share on Facebook" target="_blank" data-bind="click: trackMe">
+    <img src="/img/Facebook.png"></a>
+    </li>
+
+    <li>
+    <a id="twitter" href="https://twitter.com/intent/tweet?url={{url}}&text={{text}}" target="_blank" title="Tweet" data-bind="click: trackMe">
+    <img src="/img/Twitter.png"></a>
+    </li>
+
+    <li>
+    <a id="google" href="https://plus.google.com/share?url={{url}}" target="_blank" title="Share on Google+" data-bind="click: trackMe">
+    <img src="/img/Google+.png"></a>
+    </li>
+
+  </ul>
+</template>

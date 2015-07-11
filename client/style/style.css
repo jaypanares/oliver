@@ -133,8 +133,8 @@ span.under-dot {
  .input-field .prefix.active {
    color: #000;
  }
-      
-	  
+
+
 /*Hero*/
 /*Hero - center on small*/
 
@@ -259,7 +259,7 @@ span.under-dot {
 	  border-left: 4px solid #9DEFC0;;
 }
 .player.notdone{
-  border-left: 4px solid rgb(255, 178, 178);	
+  border-left: 4px solid rgb(255, 178, 178);
 }
 
 .player.header{
@@ -410,4 +410,13 @@ span.under-dot {
   .player.selected:hover {
     background-color: #fefff4;
   }
+}
+
+ul.share-buttons{
+  list-style: none;
+  padding: 0;
+}
+
+ul.share-buttons li{
+  display: inline;
 }
